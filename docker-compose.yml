@@ -1,0 +1,19 @@
+version: "3"
+services:
+  proxy:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./proxy/proxy.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - python-app
+    networks:
+      - demo-network
+  python-app:
+    build: python-app
+    networks:
+      - demo-network
+networks:
+  demo-network:
+    driver: bridge
