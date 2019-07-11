@@ -4,7 +4,7 @@
 resource "aws_vpc" "vpc" {
   cidr_block = "${var.root_segment}"
   tags = {
-    Name  = "${var.app_name} vpc"
+    Name  = "${var.app_name}-vpc"
     Group = "${var.app_name}"
   }
 }
@@ -15,7 +15,7 @@ resource "aws_vpc" "vpc" {
 resource "aws_internet_gateway" "igw" {
   vpc_id = "${aws_vpc.vpc.id}"
   tags = {
-    Name  = "${var.app_name} igw"
+    Name  = "${var.app_name}-igw"
     Group = "${var.app_name}"
   }
 }
@@ -29,7 +29,7 @@ resource "aws_subnet" "public-subnet1" {
   availability_zone       = "${var.az1}"
   map_public_ip_on_launch = true
   tags = {
-    Name  = "${var.app_name} public-subnet1"
+    Name  = "${var.app_name}-public-subnet1"
     Group = "${var.app_name}"
   }
 }
@@ -40,7 +40,7 @@ resource "aws_subnet" "public-subnet2" {
   availability_zone       = "${var.az2}"
   map_public_ip_on_launch = true
   tags = {
-    Name  = "${var.app_name} public-subnet2"
+    Name  = "${var.app_name}-public-subnet2"
     Group = "${var.app_name}"
   }
 }
@@ -55,7 +55,7 @@ resource "aws_route_table" "public-root-table" {
     gateway_id = "${aws_internet_gateway.igw.id}"
   }
   tags = {
-    Name  = "${var.app_name} public-root-table"
+    Name  = "${var.app_name}-public-root-table"
     Group = "${var.app_name}"
   }
 }
