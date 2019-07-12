@@ -1,0 +1,19 @@
+[
+  {
+    "name": "proxy",
+    "image": "${proxy_repo}",
+    "memory": 256,
+    "essential": true,
+    "portMappings": [
+      {
+        "containerPort": 80
+      }
+    ]
+  },
+  {
+    "name": "python-app",
+    "image": "${api_repo}",
+    "memory": 256,
+    "essential": true
+  }
+]

@@ -7,8 +7,10 @@ AWS Fargateの環境を提供する定義ファイル
 ## 準備
 terraform.tfvarsを用意する。
 ```
-access_key="YOUR_AWS_ACCESS_KEY"
-secret_key="YOUR_AWS_SECRET_KEY"
+access_key = "YOUR_AWS_ACCESS_KEY"
+secret_key = "YOUR_AWS_SECRET_KEY"
+proxy_repo = "ECR_PROXY_REPO"
+api_repo   = "ECR_API_REPO"
 ```
 
 ## 実行

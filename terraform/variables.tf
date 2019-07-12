@@ -1,5 +1,7 @@
 variable "access_key" {}
 variable "secret_key" {}
+variable "proxy_repo" {}
+variable "api_repo" {}
 
 variable "app_name" {
   default = "fargate-demo"
