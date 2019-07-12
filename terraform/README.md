@@ -13,7 +13,7 @@ secret_key="YOUR_AWS_SECRET_KEY"
 
 ## 実行
 ```
-$ terraform init
+$ terraform init # 初回のみ
 $ terraform plan
 $ terraform apply
 ```
