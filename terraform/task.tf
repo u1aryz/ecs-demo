@@ -4,8 +4,8 @@
 data "template_file" "task" {
   template = "${file("task-definitions/container_definitions.json")}"
   vars = {
-    proxy_repo = "${var.proxy_repo}"
-    api_repo   = "${var.api_repo}"
+    proxy_repo = "${aws_ecr_repository.proxy-repo.repository_url}"
+    api_repo   = "${aws_ecr_repository.api-repo.repository_url}"
   }
 }
 
