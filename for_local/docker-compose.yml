@@ -11,7 +11,7 @@ services:
     networks:
       - demo-network
   python-app:
-    build: python-app
+    build: ../python-app
     networks:
       - demo-network
 networks:
