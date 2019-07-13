@@ -1,0 +1,19 @@
+version: "3"
+services:
+  proxy:
+    build: proxy
+    image: ${PROXY_REPO}
+    ports:
+      - "80:80"
+    depends_on:
+      - python-app
+    networks:
+      - demo-network
+  python-app:
+    build: ../python-app
+    image: ${API_REPO}
+    networks:
+      - demo-network
+networks:
+  demo-network:
+    driver: bridge
