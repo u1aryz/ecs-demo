@@ -6,15 +6,15 @@ variable "app_name" {
 }
 
 variable "region" {
-  default = "ap-northeast-1"
+  default = "us-east-1"
 }
 
 variable "az1" {
-  default = "ap-northeast-1c"
+  default = "us-east-1a"
 }
 
 variable "az2" {
-  default = "ap-northeast-1d"
+  default = "us-east-1c"
 }
 
 variable "root_segment" {

@@ -16,6 +16,6 @@ fi
 
 docker-compose -f $SCRIPT_DIR/docker-compose.yml build
 
-$(aws ecr get-login --no-include-email --region ap-northeast-1)
+$(aws ecr get-login --no-include-email --region us-east-1)
 ecs-cli push $PROXY_REPO:latest
 ecs-cli push $API_REPO:latest
