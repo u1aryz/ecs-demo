@@ -1,5 +1,5 @@
 # Fargate Provisioning
-AWS Fargateの環境を提供する定義ファイル
+AWS Fargateの環境を提供する定義ファイル。
 
 ## Dependencies
 - [terraform (>= 0.12.0)](https://www.terraform.io/)
@@ -12,7 +12,7 @@ secret_key = "YOUR_AWS_SECRET_KEY"
 ```
 
 ## リポジトリを作成
-ECRリポジトリを先に作成
+ECRリポジトリを先に作成する。
 ```
 $ terraform init # 初回のみ
 $ terraform plan -target=aws_ecr_repository.proxy-repo -target=aws_ecr_repository.api-repo
@@ -20,7 +20,7 @@ $ terraform apply -target=aws_ecr_repository.proxy-repo -target=aws_ecr_reposito
 ```
 
 ## リポジトリにDockerイメージをpush
-TODO
+- [手順はこちらを参照](https://github.com/u1aryz/ecs-demo/tree/master/for_fargate)
 
 ## リポジトリ以外の環境を作成
 ```
